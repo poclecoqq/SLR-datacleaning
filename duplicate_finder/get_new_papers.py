@@ -34,8 +34,8 @@ def find_new_papers(file_path_old: str, file_path_new: str) -> Tuple[pd.DataFram
 
     print(f'Number of new papers that are duplicates: {len(duplicates)}')
     print(f'Number of new papers that are not duplicates: {len(new)}')
-    print('Percentage of duplicates: {:10.4f}'.format(
-        len(duplicates)/len(new_papers)))
+    print('Percentage of duplicates: {:10.2f}%'.format(
+        (len(duplicates)/len(new_papers)*100)))
 
     new = pd.DataFrame(new, columns=new_papers.columns)
     duplicates = pd.DataFrame(duplicates, columns=new_papers.columns)
