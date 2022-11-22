@@ -3,41 +3,68 @@ import pathlib
 import os
 
 
-def filter_papers(papers, search_terms=[], special_search_terms=[]):
-    """
-    Filters out papers which are not matched by a given search query,
-    if the search is performed in the abstract and title.
-    Arguments:
-        search_terms: first-level search terms of OR clauses joines by AND clauses
-        special_search_terms: second-level OR clause in the second OR clause of our query (for the ("error detection" AND (tab* OR cell* OR row*)))
-    Return: Papers that match a given query
-    """
+def filter_papers(papers: pd.DataFrame):
     matches = []
-    for _, row in papers.iterrows():
-        category_found = []
-        for keywords in search_terms:
-            # A first-level search
-            category_found.append(any([
-                (type(row['Title']) == str and keyword in row['Title']) or
-                (type(row['Abstract Note']) == str
-                 and keyword in row['Abstract Note'])
-                for keyword in keywords
-            ]))
-        # # A second-level search
-        for first_term in special_search_terms[0]:
-            for second_term in special_search_terms[1]:
-                # If there is any match with the ML category
-                if any([(type(row['Title']) == str and keyword in row['Title']) or (type(row['Abstract Note']) == str and keyword in row['Abstract Note']) for keyword in search_terms[0]]):
-                    # If ("error detection" AND (tab* OR cell* OR row*)) has a match in the title
-                    if type(row['Title']) == str and (first_term in row['Title'] and second_term in row['Title']):
-                        category_found[-1] = True
-                    # If ("error detection" AND (tab* OR cell* OR row*)) has a match in the abstract
-                    if type(row['Abstract Note']) == str and (first_term in row['Abstract Note'] and second_term in row['Abstract Note']):
-                        category_found[-1] = True
+    match_criteria = []
+    ml_keywords = ["machine learning", "deep learning", "neural network",
+                   "neural networks", "reinforcement learning", "supervised", "unsupervised"]
+    data_cleaning_keywords = ["data cleaning", "data cleansing", "data scrubbing", "data repairing",
+                              "data repair", "error repair", "error repairing", "confident learning", "label cleaning"]
+    error_detection_keywords = (['error detection'], [
+        'image', 'images', 'text', 'tabular', 'table', 'tables', 'row', 'column', 'rows', 'columns'])
 
-        matches.append(all(category_found))
-    papers = papers[matches]
-    return papers
+    for _, row in papers.iterrows():
+        has_matched = False
+        match_criterion = 0
+        # MATCH: ml + data cleaning. FIELD: title
+        if does_match_title(row, ml_keywords) and \
+                does_match_title(row, data_cleaning_keywords):
+            has_matched = True
+            match_criterion = 1
+        # MATCH: ml + data cleaning. FIELD: abstract
+        elif does_match_abstract(row, ml_keywords) and \
+                does_match_abstract(row, data_cleaning_keywords):
+            has_matched = True
+            match_criterion = 2
+        # MATCH: ml + error detection. FIELD: title
+        elif does_match_title(row, ml_keywords) and \
+                does_match_title(row, error_detection_keywords[0]) and \
+            does_match_title(row, error_detection_keywords[1]):
+            has_matched = True
+            match_criterion = 3
+        # MATCH: ml + error detection. FIELD: abstract
+        elif does_match_abstract(row, ml_keywords) and \
+                does_match_abstract(row, error_detection_keywords[0]) and \
+            does_match_abstract(row, error_detection_keywords[1]):
+            has_matched = True
+            match_criterion = 4
+        matches.append(has_matched)
+        match_criteria.append(match_criterion)
+
+    papers['match_criteria'] = match_criteria
+    return papers[matches]
+
+
+def does_match_title(row, keywords):
+    """
+    Given a row (a paper metadata) and some keywords,
+    """
+    matches = False
+    for keyword in keywords:
+        matches = matches or (
+            type(row['Title']) == str and keyword in row['Title'])
+    return matches
+
+
+def does_match_abstract(row, keywords):
+    """
+    Given a row (a paper metadata) and some keywords,
+    """
+    matches = False
+    for keyword in keywords:
+        matches = matches or (
+            type(row['Abstract Note']) == str and keyword in row['Abstract Note'])
+    return matches
 
 
 def save_to_csv(df):
@@ -56,14 +83,9 @@ def print_stats(initial_len, final_len):
 
 if __name__ == "__main__":
     papers = pd.read_csv('lib_gs.csv')
-    search_terms = [*["machine learning", "deep learning", "neural network", "neural networks", "reinforcement learning", "supervised", "unsupervised"],
-                    *["data cleaning", "data cleansing", "data scrubbing", "data repairing", "data repair", "error repair", "error repairing", "confident learning", "label cleaning"]]
-    # These are second-level
-    special_search_terms = [['error detection'], ['image', 'images', 'text',
-                                                  'tabular', 'table', 'tables', 'row', 'column', 'rows', 'columns']]
 
     initial_len = len(papers)
-    papers = filter_papers(papers, search_terms, special_search_terms)
+    papers = filter_papers(papers)
     save_to_csv(papers)
 
     final_len = len(papers)
