@@ -1,3 +1,4 @@
+from pathlib import Path
 import pandas as pd
 import pathlib
 import os
@@ -82,7 +83,8 @@ def print_stats(initial_len, final_len):
 
 
 if __name__ == "__main__":
-    papers = pd.read_csv('lib_gs.csv')
+    crnt_dir = Path(__file__).parent.resolve()
+    papers = pd.read_csv(crnt_dir/'lib_gs.csv')
 
     initial_len = len(papers)
     papers = filter_papers(papers)
