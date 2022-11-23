@@ -34,9 +34,9 @@ def save_to_csv(df):
 def add_noisy_abstract(papers):
     res = []
     for _, row in tqdm(papers.iterrows(), total=len(papers)):
-        if not row.isnull()['Url']:
+        if not row.isnull()['Url'] and row['Url'][-4:] != '.pdf':
             try:
-                time.sleep((1+random.uniform(0, 1)))
+                time.sleep((3+random.uniform(0, 1)))
                 r = requests.get(row['Url'])
                 abstract = text_from_html(r.text)
             except:
