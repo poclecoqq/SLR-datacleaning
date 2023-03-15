@@ -12,14 +12,14 @@ output_dir.mkdir(parents=True, exist_ok=True)
 
 def save_to_yaml(obj):
     with open(output_dir/'out.yaml', 'w') as f:
-        yaml.dump(obj, f)
+        yaml.dump(obj, f, width=1000)
 
 
 def standardize_names(papers):
     """
     Standardizes the papers' names (i.e. replaces \n with a space)
     """
-    return list(map(lambda x: type(x) is str and x.replace('\n', ' '), papers))
+    return list(map(lambda x: x.replace('\n', ' '), papers))
 
 
 def filtering_papers(papers):
