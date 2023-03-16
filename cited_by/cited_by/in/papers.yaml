@@ -1,0 +1,153 @@
+main:
+- Automated Detection of Label Errors in Semantic Segmentation Datasets via Deep Learning and Uncertainty Quantification
+- 'Annotation Error Detection: Analyzing the Past and Present for a More Coherent Future'
+- Complaint-Driven Training Data Debugging at Interactive Speeds
+- Can Foundation Models Wrangle Your Data?
+- Graph-Based Unsupervised Entity Resolution for Identifying Entity Profiles in Ambiguous Data
+- 'Sudowoodo: Contrastive Self-supervised Learning for Multi-purpose Data Integration and Preparation'
+- 'Correction to: Co-active neuro-fuzzy inference system model as single imputation approach for non-monotone pattern of missing data'
+- 'Performance evaluation of outlier detection techniques in production timeseries: A systematic review and meta-analysis'
+- 'cleanTS: Automated (AutoML) tool to clean univariate time series at microscales'
+- Deep entity matching with adversarial active learning
+- Confident Learning-Based Domain Adaptation for Hyperspectral Image Classification
+- Research on English Grammar Error Correction Technology Based on BLSTM Sequence Annotation
+- 'Automatic Detection of Grammatical Errors in English Verbs Based on RNN Algorithm: Auxiliary Objectives for Neural Error Detection Models'
+- Machine Learning-Based Grammar Error Detection Method in English Composition
+- 'Unsupervised Outlier Detection: A Meta-Learning Algorithm Based on Feature Selection'
+- 'CleanML: A study for evaluating the impact of data cleaning on ml classification tasks'
+- 'Data Quality Toolkit: Automatic assessment of data quality and remediation for machine learning datasets'
+- 'From papers to practice: the openclean open-source data cleaning library'
+- 'TSAR: a time series assisted relabeling tool for reducing label noise'
+- A reconstruction error-based framework for label noise detection
+- Unsupervised anomaly detection in data quality control
+- Semi-Supervised Data Cleaning with Raha and Baran.
+- 'Toward Data Cleaning with a Target Accuracy: A Case Study for Value Normalization'
+- 'SPADE: A Semi-supervised Probabilistic Approach for Detecting Errors in Tables'
+- 'TabReformer: Unsupervised Representation Learning for Erroneous Data Detection'
+- Correcting Corrupted Labels Using Mode Dropping of ACGAN
+- A Model and System for Querying Provenance from Data Cleaning Workflows
+- Mislabeled Samples Adjustment Based on Self-paced Learning Framework
+- Deep transfer learning for multi-source entity linkage via domain adaptation
+- 'Picket: guarding against corrupted data in tabular data during learning and inference'
+- Data readiness report
+- 'W2WNET: A two-module probabilistic Convolutional Neural Network with embedded data cleansing functionality'
+- Data cleansing for deep neural networks with storage-efficient approximation of influence functions
+- 'Chef: A cheap and fast pipeline for iteratively cleaning label uncertainties'
+- Active label cleaning for improved dataset quality under resource constraints
+- Cost-effective variational active entity resolution
+- A probabilistic database approach to autoencoder-based data cleaning
+- Research on Error Label Screening Method Based on Convolutional Neural Network
+- 'IGAEM: Improved Genetic Algorithm based Entity Matching'
+- Interactive label cleaning with example-based explanations
+- Grammatical Error Detection with Self Attention by Pairwise Training
+- Time Series Data Cleaning Based on Dynamic Speed Constraints
+- An Automated Data Pre-processing Technique for Machine Learning in Critical Systems
+- 'GraphER: Token-centric entity resolution with graph convolutional neural networks'
+- 'Tomographic Auto-Encoder: Unsupervised Bayesian Recovery of Corrupted Data'
+- 'Training-ValueNet: A new approach for label cleaning on weakly-supervised datasets'
+- A Comprehensive Benchmark Framework for Active Learning Methods in Entity Matching
+- A flexible outlier detector based on a topology given by graph communities
+- Detection of Anomalies in a Time Series Data using InfluxDB and Python
+- 'Time series data cleaning: From anomaly detection to anomaly repairing (technical report)'
+- 'PClean: Bayesian data cleaning at scale with domain-specific probabilistic programming'
+- Batchwise probabilistic incremental data cleaning
+- Does data cleaning improve heart disease prediction?
+- 'CORDEL: A contrastive deep learning approach for entity linkage'
+- A novel data repairing approach based on constraints and ensemble learning
+- Advancing Data Curation with Metadata and Statistical Relational Learning / Verbesserung der Datenvorbereitung Mit Metadaten und Statistisch-Relationalem Lernen
+- 'Nearest neighbor classifiers over incomplete information: From certain answers to certain predictions'
+- Similarity-learning information-fusion schemes for missing data imputation
+- Relational pretrained transformers towards democratizing data preparation [Vision] [arXiv]
+- Unknown Class Label Cleaning for Learning with Open-Set Noisy Labels
+- Data Cleaning of Irrelevant Images Based on Transfer Learning
+- 'Ed2: A case for active learning in error detection'
+- Neural pixel error detection
+- Automatic grammatical error detection of non-native spoken learner English
+- 'HoloDetect: Few-Shot Learning for Error Detection [arXiv]'
+- 'Piclean: A probabilistic and interactive data cleaning system'
+- Interactive correction of mislabeled training data
+- Learning functional dependencies with sparse regression
+- Multi-index dialogue data cleaning model
+- 'Learn2Clean: Optimizing the sequence of tasks for web data preparation'
+- 'When Considering More Elements: Attribute Correlation in Unsupervised Data Cleaning under Blocking'
+- Predictive Data Transformation Suggestions in Grafterizer Using Machine Learning
+- 'AlphaClean: Automatic Generation of Data Cleaning Pipelines'
+- Fast record linkage for company entities
+- Research on data cleaning technology based on instance level
+- A Method for Duplicate Record Detection Using Deep Learning
+- Combining Outlier Detection and Reconstruction Error Minimization for Label Noise Reduction
+- Statistical relational learning based automatic data cleaning
+- 'Scaling entity resolution: A loosely schema-aware approach'
+- 'Confident learning: Estimating uncertainty in dataset labels'
+- Application of attribute correlation in unsupervised data cleaning
+- A hybrid data cleaning framework using Markov logic networks
+- Data cleansing for models trained with SGD
+- 'Raha: A Configuration-Free Error Detection System'
+- Deep Learning based Radial Blur Estimation and Image Enhancement
+- Toward a view-based data cleaning architecture
+- 'AutoBlock: A hands-off blocking framework for entity matching'
+- Detecting annotation noise in automatically labelled data
+- Automated Cleaning of Identity Label Noise in A Large-scale Face Dataset Using A Face Image Quality Control
+- 'DeepClean: Data Cleaning via Question Asking'
+- Study on Record Linkage regarding Accuracy and Scalability
+- Performance analysis of machine learning algorithms for missing value imputation
+- Cleaning Crowdsourced Labels Using Oracles For Supervised Learning
+- 'How to Address the Data Quality Issues in Regression Models: A Guided Process for Data Cleaning'
+- Workload-Aware Discovery of Integrity Constraints for Data Cleaning.
+- An importance-and-semantics-aware approach for entity resolution using MLP
+- 'A comparative evaluation of outlier detection algorithms: Experiments and analyses'
+- A citeseerx-based dataset for record linkage and metadata extraction
+- Joint multi-field siamese recurrent neural network for entity resolution
+- Finding and correcting syntax errors using recurrent neural networks
+- 'Holoclean: Holistic data repairs with probabilistic inference'
+- Label denoising based on Bayesian aggregation
+- 'ERBlox: Combining matching dependencies with machine learning for entity resolution'
+- Unsupervised record matching with noisy and incomplete data
+- Data Improving in Time Series Using ARX and ANN Models
+- Automated data cleansing through meta-learning
+- A novel cost-based model for data repairing
+- Numerically grounded language models for semantic error correction
+- Entity matching across multiple heterogeneous data sources
+- Improving Data Quality by Leveraging Statistical Relational Learning.
+- 'Asking for a second opinion: Re-querying of noisy multi-class labels'
+- WENN for individualized cleaning in imbalanced data
+- Entity Resolution Using Convolutional Neural Network
+- Data cleansing using clustering
+- Data cleaning using complementary fuzzy support vector machine technique
+- 'ActiveClean: An interactive data cleaning framework for modern machine learning'
+snowball:
+- 'BoostClean: Automated Error Detection and Repair for Machine Learning'
+- Using Gaussian Mixture Models to Detect Outliers in Seasonal Univariate Network Traffic
+- Model-based exception mining for object-relational data
+- Generative Adversarial Active Learning for Unsupervised Outlier Detection
+- Outlier detection in heterogeneous datasets using automatic tuple expansion
+- 'Zeroer: Entity resolution using zero labeled examples'
+- 'Deep learning for entity matching: A design space exploration'
+- Distributed representations of tuples for entity resolution.
+- 'Baran: Effective Error Correction via a Unified Context Representation and Transfer Learning'
+- Metadata-driven error detection
+- What to Expect of Classifiers? Reasoning about Logistic Regression with Missing Features
+- Complaint-driven Training Data Debugging for Query 2.0
+- Robust Variational Autoencoders for Outlier Detection in Mixed-Type Data.
+- Video anomaly detection and localisation based on the sparsity and reconstruction error of auto-encoder.
+- 'O2u-net: A simple noisy label detection approach for deep neural networks'
+- 'Deep learning with noisy labels: Exploring techniques and remedies in medical image analysis'
+- Uncertainty based detection and relabeling of noisy image labels.
+- 'AutoBlock: A Hands-off Blocking Framework for Entity Matching'
+- Entity Matching with Transformer Architectures - A Step Forward in Data Integration
+- Deep Entity Matching with Pre-Trained Language Models
+- Deep sequence-to-sequence entity matching for heterogeneous entity resolution
+- 'Falcon: scaling up hands-off crowdsourced entity matching to build cloud services'
+- A partial-orderbased framework for cost-effective crowdsourced entity resolution
+- 'Hike: a hybrid humanmachine method for entity alignment in large-scale knowledge bases'
+- Entity matching with active monotone classification
+- Low-resource deep entity resolution with transfer and active learning
+- Deep indexed active learning for matching heterogeneous entity representations.
+- Active cleaning of label noise
+- Identifying Mislabeled Instances in Classification Datasets.
+- Identifying label noise in time-series datasets
+- A two-stage ensemble method for the detection of class-label noise.
+- Finding label noise examples in large scale datasets
+- Learning from noisy large-scale datasets with minimal supervision.
+- "Cleannet: Transfer learning for scalable image classi\uFB01er training with label noise."
+- Training set debugging using trusted items.
