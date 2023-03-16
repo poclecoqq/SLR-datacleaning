@@ -3,7 +3,6 @@ from pathlib import Path
 import yaml
 import json
 from difflib import SequenceMatcher as SM
-from collections import defaultdict
 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -31,9 +30,10 @@ def main():
     papers = load_yaml('papers.yaml')
     papers_cs = load_yaml('cited_by.yaml')
 
-    res = defaultdict(list)
+    res = {}
     # For every snowballed paper
     for p_name, papers_c in papers_cs.items():
+        res[p_name] = []
         # For each paper that cites the snowballed paper
         for paper_c in papers_c:
             # For each paper in our initial pool of papers
