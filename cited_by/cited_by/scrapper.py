@@ -1,6 +1,6 @@
 from scholarly import scholarly, ProxyGenerator
 from env import API_KEY
-
+from tqdm import tqdm
 
 # Setup web-scraper in global space
 pg = ProxyGenerator()
@@ -48,13 +48,17 @@ def search_cited_by(papers_name):
         res: A dictionnary where the key is the paper's name and the value, a list of papers that cite the paper
     """
     res = {}
-    for paper_name in papers_name:
-        res[paper_name] = []
-        search_query = scholarly.search_pubs(paper_name)
-        # I suppose the first paper is the right one
-        study = next(search_query)
-        s_cited_by = scholarly.citedby(study)
-        # Save the info of the studies citing this study
-        for s in s_cited_by:
-            res[paper_name].append(s)
+    try:
+        for paper_name in tqdm(papers_name):
+            res[paper_name] = []
+            search_query = scholarly.search_pubs(paper_name)
+            # I suppose the first paper is the right one
+            study = next(search_query)
+            s_cited_by = scholarly.citedby(study)
+            # Save the info of the studies citing this study
+            for s in s_cited_by:
+                res[paper_name].append(s)
+    except:
+        print('Scrapping process stopped')
+
     return res

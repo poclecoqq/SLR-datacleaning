@@ -27,5 +27,5 @@ def save_to_yaml(obj, f_name):
 
 def load_yaml(f_name):
     with open(input_dir/f_name, 'r') as f:
-        res = yaml.load(f)
+        res = yaml.safe_load(f)
     return res
