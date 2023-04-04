@@ -12,6 +12,7 @@ def extract_papers_titles(papers_name):
     """
     Given a list of papers' names, fetches the papers that cites
     the given papers.
+
     Input:
         papers_name: a list of papers' names
     Output:
