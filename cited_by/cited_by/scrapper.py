@@ -26,11 +26,12 @@ def extract_papers_titles(papers_name):
 
 def extract_titles(cited_by_dict):
     """
-    Given the raw scholarly dictionnary, return 
+    Given the raw scholarly dictionnary, return
     a dictionnary where only the paper's names are kept.
     """
+
     def extract_title(p):
-        return p['bib']['title']
+        return p["bib"]["title"]
 
     res = {}
     for paper_name, papers_c in cited_by_dict.items():
@@ -49,17 +50,20 @@ def search_cited_by(papers_name):
         res: A dictionnary where the key is the paper's name and the value, a list of papers that cite the paper
     """
     res = {}
-    try:
-        for paper_name in tqdm(papers_name):
+    for paper_name in tqdm(papers_name):
+        try:
             res[paper_name] = []
             search_query = scholarly.search_pubs(paper_name)
-            # I suppose the first paper is the right one
-            study = next(search_query)
-            s_cited_by = scholarly.citedby(study)
-            # Save the info of the studies citing this study
-            for s in s_cited_by:
-                res[paper_name].append(s)
-    except:
-        print('Scrapping process stopped')
-
+            if search_query.total_results > 0:
+                # I suppose the first paper is the right one
+                study = next(search_query)
+                s_cited_by = scholarly.citedby(study)
+                # Save the info of the studies citing this study
+                for s in s_cited_by:
+                    res[paper_name].append(s)
+            else:
+                print(f"Could not find paper: {paper_name}")
+        except Exception as e:
+            print(f"Failed to scrape paper: {paper_name}")
+            print(e)
     return res
