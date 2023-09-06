@@ -1,0 +1,5 @@
+# Quality control questions
+This directory contains two files: `papers.csv` and `peer_review_excluded_papers.md`.
+
+- `papers.csv`: The list of papers on which we applied the quality control questions. We indicate in column "Relevant" if a paper is included or not in the study. A paper may have one of the following values: `YES` if it is relevant, `score too low` if the paper is excluded from the study according to quality/relevance control questions (see Section 2.5.4), and `not accessible` or `exclusion criteria last step` if the paper does not respect the exclusion and inclusion criteria from Section 2.5.3. Papers that are included have data extracted, as described in Section 2.7 of our paper. 
+- `peer_review_excluded_papers.md`: Papers that are excluded of the study because their score is too low are reviewed by a second researcher, using the same quality/relevance control question (described in Section 2.5.4). Their ratings are saved into this file.
